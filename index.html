@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link type="text/css" rel="stylesheet" href="libs/css/style.min.css">
+    <title>Anyships</title>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <header class="header">
+                <div class="top-header">
+                    <div class="logo">
+                        <img src="libs/img/logo.png" alt="Logo">
+                    </div>
+                    <div class="login-block fl_right">
+                        <a href="">
+                            <span>Войти</span>
+                            <img src="libs/img/icon_login.png" alt="">
+                        </a>
+                    </div>
+                
+                </div>
+                <div class="main-header">
+                    <div class="main-header-title_block"> 
+                        <h1 class="main-header-title_block-title space-grotesk-font mobile-hide">Сервис бронирования яхт</h1>
+                        <h1 class="main-header-title_block-title space-grotesk-font mobile-show">Бронирования яхт</h1>
+                    </div>
+                    <div class="main-header-forms">
+                        <form class="main-header-forms-form">
+                            <div class="main-header-forms-top flex form-row">
+                                <div class="flex-item">
+                                    <label>Количество персон</label>
+                                    <input type="number" value="3" id="person">
+                                </div>
+                                <div class="flex-item">
+                                    <label>Количество часов</label>
+                                    <input type="number" value="6" id="time">
+                                </div>
+                                <div class="flex-item">
+                                    <label>Дата</label>
+                                    <input type="date" id="date">
+                                </div>
+                            </div>
+                            <div class="main-header-forms-bottom">
+                                <div class="flex">
+                                    <div class="form-row">
+                                        <label>Время начала</label>
+                                        <input type="number" value="15">
+                                        <div class="range-block time-slider">
+                                            <input type="range" min="1" max="24" value="15" class="slider" id="timeRange">
+                                           
+                                            <div class="range-values">
+                                                <span>1</span>
+                                                <span>2</span>
+                                                <span>3</span>
+                                                <span>4</span>
+                                                <span>5</span>
+                                                <span>6</span>
+                                                <span>7</span>
+                                                <span>8</span>
+                                                <span>9</span>
+                                                <span>10</span>
+                                                <span>11</span>
+                                                <span>12</span>
+                                                <span>13</span>
+                                                <span>14</span>
+                                                <span>15</span>
+                                                <span>16</span>
+                                                <span>17</span>
+                                                <span>18</span>
+                                                <span>19</span>
+                                                <span>20</span>
+                                                <span>21</span>
+                                                <span>22</span>
+                                                <span>23</span>
+                                                <span>24</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <label>Цена / час</label>
+                                        <div class="values">
+                                            <input type="number" value="8000" class="min-price"> <span>-</span>
+                                            <input type="number" value="54000" class="max-price"> 
+                                        </div>
+                                        <div class="range-block price-slider">
+                                            <div class="slider-track"></div>
+                                            <input type="range" min="5000" max="130000" value="8000" id="min-price" oninput="slideOne()">
+                                            <input type="range" min="5000" max="130000" value="80000" id="max-price" oninput="slideTwo()">
+                                            
+                                            <div class="range-values">
+                                                <span>От 5 000 руб</span>
+                                                <span>До 130 000 руб</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="main-header-forms-btn">
+                                <div class="main-header-forms-btn-title">
+                                    Найти яхту по фильтру
+                                </div>
+                                <div class="form-results">
+                                    Для <span class="persons">8</span> человек на <span class="hours">16</span> часов - <span class="date">25 февраля 2024</span> с <span class="start-date">15:00</span>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="main-content">
+                    <div class="main-content-items">
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image1.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image20.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image19.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image18.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item unavailable">
+                            <div class="main-content-item-panel">
+                                <span class="unavailable">Временно недоступно</span>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image17.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image16.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item unavailable">
+                            <div class="main-content-item-panel">
+                                <span class="unavailable">Временно недоступно</span>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image15.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image14.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image13.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image12.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item unavailable">
+                            <div class="main-content-item-panel">
+                                <span class="unavailable">Временно недоступно</span>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image11.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image10.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image9.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image8.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image7.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image1.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item unavailable">
+                            <div class="main-content-item-panel">
+                                <span class="unavailable">Временно недоступно</span> 
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image6.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image5.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image4.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-items-item">
+                            <div class="main-content-item-panel">
+                                <div class="panel-flex">
+                                    <img src="libs/img/lg.png" alt="">
+                                    <a class="modal-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                 </path> 
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div> 
+                            </div>
+                            <div class="main-content-item-img">
+                                <img src="libs/img/image3.png" alt="">
+                            </div>
+                            <div class="main-content-item-attr">
+                                
+                                <div class="main-content-item-title">
+                                    Яхта Azimut 68 Princess
+                                </div>
+                                <div class="main-content-item-desc">
+                                    <div class="desc-item">
+                                        <div class="item">1 500 РУБ</div>
+                                        <div class="item mobile-hide">Рекомендованная цена</div>
+                                        <div class="item mobile-show">Рек. цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">3 000 РУБ</div>
+                                        <div class="item">Текущая цена</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">40 м</div>
+                                        <div class="item">Длина яхты</div>
+                                    </div>
+                                    <div class="desc-item">
+                                        <div class="item">8 чел.</div>
+                                        <div class="item">Вместимость</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-content-btn">
+                        <a class="more-btn">
+                            <img src="libs/img/plus.png" alt="">
+                            <span>Показать больше яхт</span>
+                        </a>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer-content mobile-hide">
+                    <div class="footer-item">
+                        <a href="tel:+971585174744">По всем вопросам +971 58 517 4744</a>
+                    </div>
+                    <div class="footer-item">
+                        <ul class="socials">
+                            <li><a href="https://whatsapp.com" target="_blank"><img src="libs/img/whatsapp.png" alt=""></a></li>
+                            <li><a href="https://facebook.com" target="_blank"><img src="libs/img/fb.png" alt=""></a></li>
+                            <li><a href="https://instagram.com" target="_blank"><img src="libs/img/ig.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <a href="#" class="page-url">Политика конфиденциальности</a>
+                    </div>
+                </div>
+                <div class="footer-content mobile-show">
+                    <div class="footer-item">
+                        <p>Rental yacht - customer service</p>
+                        <a href="tel:+971585174744">+971 58 517 4744</a>
+                    </div>
+                    <div class="footer-item">
+                        <a class="social-btn">
+                            <img src="libs/img/whatsapp.png" alt="">
+                            WhatApp us
+                        </a>
+                    </div>
+                    <div class="footer-item">
+                        <span>Dubai, United Arab Emirates</span>
+                    </div>
+                </div>
+            </footer>
+
+
+        </div>
+    </div>
+
+
+    <div id="form" class="modal">
+
+        <div class="modal-container">
+            <div class="modal-head">
+                <div class="close-block">
+                    <img src="libs/img/cl.png" alt="">
+                    <span>Закрыть</span>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="modal-left">
+                    <img src="libs/img/modal.png" alt="">
+                </div>
+                <div class="modal-right">
+                    <h2 class="modal-header space-grotesk-font">Бронирование яхты</h2>
+                    <div class="modal-desc">Заполните форму ниже, чтобы забронировать яхту, после чего наши специалисты свяжутся с вами, чтобы уточнить детали.</div>
+                    <div class="modal-form-block">
+                        <form class="modal-form">
+                            <div class="modal-form-row">
+                                <div class="modal-form-item half">
+                                    <label>Количество персон</label>
+                                    <input type="number" class="modal-person" value="3">
+                                </div>
+                                <div class="modal-form-item half">
+                                    <label>Количество часов</label>
+                                    <input type="number" class="modal-hours" value="16">
+                                </div>
+                            </div>
+                            <div class="modal-form-row">
+                                <div class="modal-form-item full">
+                                    <input type="text" class="modal-name" placeholder="Иванов Кирилл Иванович">
+                                    <label>ФИО</label>
+                                </div>
+                            </div>
+                            <div class="modal-form-row">
+                                <div class="modal-form-item full">
+                                    <input type="text" class="modal-name" placeholder="+ 7 (999) 650 - 50 - 50">
+                                    <label>Номер телефона</label>
+                                </div>
+                            </div>
+                            <div class="modal-form-row">
+                                <div class="modal-form-item full modal-btn-block">
+                                    <div class="modal-btn">
+                                        Отправить
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-form-row">
+                                <div class="modal-form-item">
+                                    <p>Пользуясь данной формой вы соглашаетесь с политикой компании</p>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal" id="thank-you">
+
+        <div class="modal-container">
+            <div class="modal-head">
+                <div class="close-block">
+                    <img src="libs/img/cl.png" alt="">
+                    <span>Закрыть</span>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="modal-form-row column-flex">
+                    <h2 class="modal-header space-grotesk-font">Все отлично!</h2>
+                <div class="modal-desc">Ваша заявка была успешно отправлена и в ближайшее время с вами свяжется специалист нашей компании, чтобы подтвердить информацию и сориентировать вас по вопросам.</div>
+                </div>
+                
+            </div>
+            <div class="modal-form-row">
+                <div class="modal-form-item full modal-btn-block">
+                    <div class="modal-btn">
+                        Далее
+                    </div>
+                </div>
+            </div>
+            <div class="modal-form-row">
+                <div class="modal-form-item-block">
+                    <p>Пользуясь данной формой вы соглашаетесь с политикой компании</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop"></div>
+
+
+    <script src="libs/js/slider.min.js"></script>
+    <script src="libs/js/modal.js"></script>
+</body>
+</html>
